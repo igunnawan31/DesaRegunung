@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('animate-fade-in-up');
-                observer.unobserve(entry.target); // animasi hanya terjadi sekali
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -73,4 +73,13 @@ window.addEventListener('scroll', () => {
         header.classList.remove('bg-green-800', 'text-white');
         header.classList.add('bg-transparent', 'text-black');
     }
+});
+
+const tabs = document.querySelectorAll('.tab');
+    
+tabs.forEach((tab) => {
+    tab.addEventListener('click', function () {
+        tabs.forEach(t => t.classList.remove('bg-slate-200'));
+        this.classList.add('bg-slate-200');
+    });
 });

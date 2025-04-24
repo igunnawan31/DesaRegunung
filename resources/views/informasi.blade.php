@@ -10,8 +10,10 @@
 </head>
 <body>
     <x-navbar></x-navbar>
-    <div class="mt-44">
-        
+    <div class="container w-full lg:mx-52 mt-44">
+        <div class="block lg:flex items-center">
+            <x-listinformasi></x-listinformasi>
+        </div>
     </div>
 </body>
 </html>
