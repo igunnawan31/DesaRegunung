@@ -1,4 +1,4 @@
-<header id="header" class="bg-transparent fixed top-0 left-0 w-full flex items-center z-10 transition-colors duration-300 lg:px-8 border border-b-black">
+<header id="header" class="bg-transparent fixed backdrop-blur-sm top-0 left-0 w-full flex items-center z-10 transition-colors duration-300 lg:px-8">
     <div class="mx-auto container py-2 ">
         <div class="flex items-center justify-between relative">
             <div class="px-4">
