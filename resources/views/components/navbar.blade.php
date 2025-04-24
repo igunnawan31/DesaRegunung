@@ -1,4 +1,4 @@
-<header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 mt-2 lg:px-8">
+<header id="header" class="bg-transparent fixed top-0 left-0 w-full flex items-center z-10 transition-colors duration-300 lg:px-8 border border-b-black">
     <div class="mx-auto container py-2 ">
         <div class="flex items-center justify-between relative">
             <div class="px-4">
@@ -17,32 +17,54 @@
                     class="transition-all duration-300 hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[20rem] 
                     w-full right-4 top-full lg:block lg:static lg:max-w-full lg:shadow-none lg:rounded-none
                     lg:bg-transparent">
-                    <ul class="block lg:flex">
+                    <ul class="block lg:flex items-center">
                         <li class="group mb-2">
-                            <a href="/" class="md:font-bold text-base  text-black p-2 mx-8 rounded-lg
-                            flex group-hover:shadow-md">Beranda</a>
+                            <a href="/" class="relative md:font-bold text-base text-black p-2 mx-8 rounded-lg flex group-hover:shadow-md 
+                                after:content-[''] after:absolute after:h-1 after:bg-black after:rounded-full 
+                                after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
+                                {{ request()->is('/') ? 'after:opacity-100' : 'after:opacity-0' }}">Beranda</a>
                         </li>
                         <li class="group mb-2">
-                            <a href="/profildesa" class="md:font-bold text-base text-black p-2 mx-8 rounded-lg
-                            flex group-hover:shadow-md">Profil Desa</a>
+                            <a href="/profildesa" 
+                                class="relative md:font-bold text-base text-black p-2 mx-8 rounded-lg flex group-hover:shadow-md 
+                                after:content-[''] after:absolute after:h-1 after:bg-black after:rounded-full 
+                                after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
+                                {{ request()->is('profildesa') ? 'after:opacity-100' : 'after:opacity-0' }}">Profil Desa</a>
                         </li>
                         <li class="group mb-2">
-                            <a href="/informasi" class="md:font-bold text-base text-black p-2 mx-8 rounded-lg
-                            flex group-hover:shadow-md">Informasi</a>
+                            <a href="/informasi" 
+                                class="relative md:font-bold text-base text-black p-2 mx-8 rounded-lg flex group-hover:shadow-md 
+                                after:content-[''] after:absolute after:h-1 after:bg-black after:rounded-full 
+                                after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
+                                {{ request()->is('informasi') ? 'after:opacity-100' : 'after:opacity-0' }}">
+                                Informasi
+                            </a>
                         </li>
                         <li class="group mb-2">
-                            <a href="/berita" class="md:font-bold text-base text-black p-2 mx-8 rounded-lg
-                            flex group-hover:shadow-md">Berita</a>
+                            <a href="/berita" class="relative md:font-bold text-base text-black p-2 mx-8 rounded-lg flex group-hover:shadow-md 
+                                after:content-[''] after:absolute after:h-1 after:bg-black after:rounded-full 
+                                after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
+                                {{ request()->is('berita') ? 'after:opacity-100' : 'after:opacity-0' }}">
+                                Berita
+                            </a>
                         </li>
                         <li class="group mb-2">
-                            <a href="/umkm" class="md:font-bold text-base text-black p-2 mx-8 rounded-lg
-                            flex group-hover:shadow-md">UMKM</a>
+                            <a href="/umkm" class="relative md:font-bold text-base text-black p-2 mx-8 rounded-lg flex group-hover:shadow-md 
+                                after:content-[''] after:absolute after:h-1 after:bg-black after:rounded-full 
+                                after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
+                                {{ request()->is('umkm') ? 'after:opacity-100' : 'after:opacity-0' }}">
+                                UMKM
+                            </a>
                         </li>
                         <li class="group mb-2">
-                            <a href="/galeri" class="md:font-bold text-base text-black p-2 mx-8 rounded-lg
-                            flex group-hover:shadow-md">Galeri</a>
+                            <a href="/galeri" class="relative md:font-bold text-base text-black p-2 mx-8 rounded-lg flex group-hover:shadow-md 
+                                after:content-[''] after:absolute after:h-1 after:bg-black after:rounded-full 
+                                after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
+                                {{ request()->is('galeri') ? 'after:opacity-100' : 'after:opacity-0' }}">
+                                Galeri
+                            </a>
                         </li>
-                        <li class="group mb-2">
+                        <li class="group mb-2 ml-0 lg:ml-8">
                             <div class="mx-8">
                                 <form class="max-w-md">   
                                     <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>

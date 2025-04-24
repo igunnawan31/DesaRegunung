@@ -17,6 +17,26 @@ Route::get('/', function () {
     return view('beranda');
 });
 
+Route::get('/berita', function () {
+    return view('berita');
+});
+
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+
+Route::get('/informasi', function () {
+    return view('informasi');
+});
+
+Route::get('/profildesa', function () {
+    return view('profildesa');
+});
+
+Route::get('/umkm', function () {
+    return view('umkm');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

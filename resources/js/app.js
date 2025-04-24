@@ -62,3 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const elements = document.querySelectorAll('.animate-on-scroll');
     elements.forEach(element => observer.observe(element));
 });
+
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+        header.classList.remove('bg-transparent', 'text-black');
+        header.classList.add('bg-green-800', 'text-white');
+    } else {
+        header.classList.remove('bg-green-800', 'text-white');
+        header.classList.add('bg-transparent', 'text-black');
+    }
+});
