@@ -17,9 +17,9 @@
                     <div class="flex items-center justify-center">
                         <div class="w-full flex items-center justify-start">
                             <div class="text-center">
-                                <h1 class="mb-10 text-7xl font-bold gradient-text md:text-7xl lg:text-8xl lg:text-left animate-fadeInUp text-white">Wihara Sima</h1>
-                                <h2 class="text-2xl gradient-text lg:text-left animate-fadeInUp delay-150 text-white shadow-sm">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non reiciendis ex dolor explicabo in saepe architecto mollitia amet, iure nostrum commodi quisquam recusandae quaerat et excepturi expedita harum consequuntur.
+                                <h1 class="mb-10 text-7xl font-bold md:text-7xl lg:text-8xl lg:text-left animate-fadeInUp text-white">Wihara Sima</h1>
+                                <h2 class="text-2xl lg:text-justify animate-fadeInUp delay-150 text-white shadow-sm">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ullam placeat impedit rerum expedita explicabo doloribus non voluptatem? A earum necessitatibus nisi ab aliquid eveniet magni ut ipsum excepturi vero illo quidem explicabo voluptates, sequi, animi alias dicta et nulla. Pariatur consectetur tenetur officiis modi expedita, sint sapiente hic harum?
                                 </h2>
                             </div>
                         </div>  

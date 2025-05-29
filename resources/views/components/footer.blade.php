@@ -3,12 +3,11 @@
     <div class="mx-auto container ">
         <div class="flex flex-wrap mx-auto px-4 items-center justify-center">
             <!-- logo -->
-            <div class="w-full px-4 mb-8 md:mb-0 lg:w-3/6">
+            <div class="w-full mb-8 md:mb-0 lg:w-3/6">
                 <div class="flex flex-col gap-4 justify-start lg:items-center md:flex-row">
-                    <img src="{{ asset('assets/riung.png') }}" alt="logo bem " class="w-2/5 md:w-[20%] lg:w-[25%] my-4">
+                    <img src="{{ asset('assets/logo.png') }}" alt="logo bem " class="w-2/5 md:w-[20%] lg:w-[10%] my-4">
                     <div class="flex flex-col justify-center ">
-                        <h1 class="font-semibold text-2xl md:text-3xl lg:text-5xl mb-1">BEM FSM</h1>
-                        <p class="font-semibold text-center text-xs md:text-sm">- Kabinet Riung Mandala -</p>
+                        <h1 class="font-semibold text-2xl md:text-3xl lg:text-5xl mb-1">Wisma Sima</h1>
                     </div>
                 </div>
             </div>
@@ -16,10 +15,7 @@
             <!-- alamat -->
             <div class="w-full px-4 md:px-8 mb-8 lg:w-1/6 self-start">
                 <h1 class="font-semibold text-2xl mb-1 md:mb-2 mt-2">Alamat</h1>
-                <p class="font-normal text-xs">Fakultas Sains dan Matematika</p>
-                <p class="font-normal text-xs">Jl. Prof. Soedarto No.50275, Tembalang, Kec. Tembalang, Kota Semarang,
-                    Jawa Tengah </p>
-                <p class="font-normal text-xs">50275</p>
+                <p class="font-normal text-xs">Bukit Kassapa, RT.04/RW.01, Pudakpayung, Banyumanik, Semarang City, Central Java 50265</p>
             </div>
             <div class="hidden w-[1px] bg-white self-stretch md:block "></div>
             <!-- kontak -->
@@ -47,83 +43,13 @@
                             </a>
                         </span>
                     </li>
-                    <li class="flex items-center text-sm mb-2">
-                        <span class="inline-block">
-                            <svg width="25px" height="25px" viewBox="0 0 24.00 24.00" fill="none"
-                                xmlns="http://www.w3.org/2000/svg" stroke="#000000"
-                                stroke-width="0.00024000000000000003">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke="#CCCCCC" stroke-width="0.096"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <path fill-rule="evenodd" clip-rule="evenodd"
-                                        d="M3.75 5.25L3 6V18L3.75 18.75H20.25L21 18V6L20.25 5.25H3.75ZM4.5 7.6955V17.25H19.5V7.69525L11.9999 14.5136L4.5 7.6955ZM18.3099 6.75H5.68986L11.9999 12.4864L18.3099 6.75Z"
-                                        fill="#fff"></path>
-                                </g>
-                            </svg>
-                        </span>
-                        <span class="ml-2">
-                            <a href="mailto:bemfsm@gmail.com" class="text-white hover:text-white relative group">
-                                bemfsm@gmail.com
-                                <span
-                                    class="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-40 blur-lg"></span>
-                            </a>
-                        </span>
-                    </li>
-                    <li class="flex items-center text-sm mb-2">
-                        <span class="inline-block">
-
-                            <svg width="25px" height="25px" viewBox="0 0 48.00 48.00" version="1.1"
-                                xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="2.304">
-                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                                <g id="SVGRepo_iconCarrier">
-                                    <defs>
-                                        <style>
-                                            .b {
-                                                fill: #fff;
-                                            }
-
-                                            .c {
-                                                fill: none;
-                                                stroke: #fff;
-                                                stroke-linecap: round;
-                                                stroke-linejoin: round;
-                                            }
-                                        </style>
-                                    </defs>
-                                    <circle class="b" cx="15.64" cy="13.46" r=".75"></circle>
-                                    <line class="c" x1="15.64" x2="15.64" y1="16.93" y2="31.91">
-                                    </line>
-                                    <path class="c"
-                                        d="m33.11 31.91v-9.61a5.83 5.83 0 0 0-5.82-5.82 5.83 5.83 0 0 0-5.83 5.82v9.61">
-                                    </path>
-                                    <line class="c" x1="21.46" x2="21.46" y1="22.3" y2="16.93">
-                                    </line>
-                                    <path class="c"
-                                        d="m40.5 5.5h-33a2 2 0 0 0-2 2v33a2 2 0 0 0 2 2h33a2 2 0 0 0 2-2v-33a2 2 0 0 0-2-2z">
-                                    </path>
-                                </g>
-                            </svg>
-                        </span>
-                        <span class="ml-2">
-                            <a href="https://www.linkedin.com/company/bemfsmundip/"
-                                class="text-white hover:text-white relative group">
-                                bemfsmundip
-                                <span
-                                    class="absolute inset-0 bg-white opacity-0 transition-opacity duration-300 group-hover:opacity-40 blur-lg"></span>
-                            </a>
-                        </span>
-                    </li>
                 </ul>
             </div>
         </div>
         <div class="w-full mt-4 pt-6 border-t border-white px-8">
             <!-- iconku -->
-            <div class="flex items-center justify-center mb-4 md:justify-between mx-12 md:gap-4">
-                <p class="hidden font-medium text-center text-white md:text-xs md:block">Copyright © Muhammad
-                    Gunawan | Daffa Hirza Ni'am | Mohammad Izza Hakiki | Muhammad Dimas Arya Putra
-                <p>
+            <div class="flex items-center justify-center mb-4 md:justify-between lg:mx-12 md:gap-4">
+                <p class="hidden font-medium text-white md:text-xs md:block">Copyright © Muhamad Gunawan <p>
                 <div class="flex">
                     <!-- youtube -->
                     <a href="#" target="_blank"
@@ -163,8 +89,7 @@
                         </a>
                 </div>
             </div>
-            <p class="font-medium text-xs text-center text-slate-400 md:hidden">Copyright © Muhammad Gunawan
-                | Daffa Hirza Ni'am | Mohammad Izza Hakiki | Muhammad Dimas Arya Putra </p>
+            <p class="font-medium text-xs text-center text-slate-400 md:hidden">Copyright © Muhamad Gunawan</p>
         </div>
     </div>
 </footer>

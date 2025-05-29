@@ -65,16 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const header = document.getElementById('header');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 10) {
-        header.classList.remove('bg-transparent', 'text-black');
-        header.classList.add('bg-green-800', 'text-white');
-    } else {
-        header.classList.remove('bg-green-800', 'text-white');
-        header.classList.add('bg-transparent', 'text-black');
-    }
-});
-
 const tabs = document.querySelectorAll('.tab');
     
 tabs.forEach((tab) => {
