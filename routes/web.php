@@ -17,8 +17,8 @@ Route::get('/', function () {
     return view('beranda');
 });
 
-Route::get('/berita', function () {
-    return view('berita');
+Route::get('/sejarah', function () {
+    return view('sejarah');
 });
 
 Route::get('/galeri', function () {

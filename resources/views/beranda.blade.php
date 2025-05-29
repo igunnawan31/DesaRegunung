@@ -9,78 +9,101 @@
     </head>
     <body class="overflow-x-hidden">
         <x-navbar/>
-        <div class="w-full h-screen relative">
-            <!-- Background Image -->
-            <div class="absolute inset-0" style="background-image: url('{{ asset('assets/Desa.jpg') }}'); background-size: cover; background-position: center; opacity: 0.8;"></div>
-                
-                <!-- Overlay Layer -->
-                <div class="absolute inset-0 bg-gradient-to-t from-green-500 to-transparent via-transparent"></div>
-                
-                <!-- Content -->
-                <div class="relative flex flex-col items-start justify-center h-screen px-8">
-                    <h1 class="text-5xl font-bold mb-4">Selamat datang</h1>
-                    <h2 class="text-4xl font-bold mb-4 bg-gradient-to-r bg-cover w-5/6 h-[50px] from-blue-200 to-green-200 bg-clip-text text-transparent">Website Resmi Desa Regunung</h2>
-                    <p class="text-lg">Sumber informasi terbaru tentang pemerintahan di Desa Regunung</p>
+        <section id="Home" class="relative min-h-screen pb-24 pt-36 bg-cover bg-center" style="background-image: url('{{ asset('assets/Desa.jpg') }}');">
+            <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+
+            <div class="relative z-5 flex items-center justify-center h-full py-[13rem]">
+                <div class="container mx-auto">
+                    <div class="flex items-center justify-center">
+                        <div class="w-full flex items-center justify-start">
+                            <div class="text-center">
+                                <h1 class="mb-10 text-7xl font-bold gradient-text md:text-7xl lg:text-8xl lg:text-left animate-fadeInUp text-white">Wihara Sima</h1>
+                                <h2 class="text-2xl gradient-text lg:text-left animate-fadeInUp delay-150 text-white shadow-sm">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores non reiciendis ex dolor explicabo in saepe architecto mollitia amet, iure nostrum commodi quisquam recusandae quaerat et excepturi expedita harum consequuntur.
+                                </h2>
+                            </div>
+                        </div>  
+                    </div>
                 </div>
             </div>
-        <div class="flex flex-row items-center px-8 justify-center gap-8 h-screen">
-            <div class="flex flex-col items-start justify-center w-full h-full ">
-                <h1 class="text-5xl font-bold mb-4">Jelajahi Desa</h1>
-                <p class="text-lg mb-4 text-justify">
-                    Website ini adalah website resmi Desa Regunung. Website ini bertujuan untuk memberikan informasi kepada masyarakat tentang Desa Regunung.
-                Melalui website ini Anda dapat menjelajahi segala hal yang terkait dengan Desa. Aspek pemerintahan, penduduk, demografi, potensi Desa, dan juga berita tentang Desa.
-                </p>
-            </div>
-            <div class="flex flex-col w-full items-start gap-4 justify-center h-full ">
-                <div class="flex flex-row w-full gap-4 h-3/5 pr-8 ">
-                    <div class="flex w-full h-full shadow-md items-center text-center justify-center text-6xl">
-                        A
+        </section>
+        <section id="About" class="py-24 px-4 lg:px-8">
+            <div class="container mx-auto">
+                <div class="flex flex-wrap">
+                    <div id="default-carousel" class="relative w-full px-2 lg:w-1/2 justify-center" data-carousel="slide">
+                        <div class="relative aspect-video overflow-hidden rounded-lg w-full h-full">
+                            {{-- @foreach($posts as $index => $post)
+                                <div class="{{ $index === 0 ? '' : 'hidden' }} duration-700 ease-in-out" data-carousel-item>
+                                    <img src="{{ asset('storage/' . $post->post_foto) }}" class="absolute block w-full rounded-lg" alt="Post Image">
+                                </div>
+                            @endforeach --}}
+                            <div class="duration-700 ease-in-out" data-carousel-item>
+                                <img src="{{ asset('assets/Desa.jpg') }}" class="absolute block w-full rounded-lg" alt="Post Image">
+                            </div>
+                        </div>
+                        <div class="absolute z-5 flex -translate-x-1/2 bottom-7 left-1/2 space-x-3 rtl:space-x-reverse">
+                            {{-- @foreach($posts as $post)
+                                <button type="button" class="w-3 h-3 rounded-full" aria-current="{{ $index === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}" data-carousel-slide-to="{{ $index }}"></button>
+                            @endforeach --}}
+                        </div>
+                        <button type="button" class="absolute top-0 start-0 z-5 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                                </svg>
+                                <span class="sr-only">Previous</span>
+                            </span>
+                        </button>
+                        <button type="button" class="absolute top-0 end-0 z-5 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                                </svg>
+                                <span class="sr-only">Next</span>
+                            </span>
+                        </button>
                     </div>
-                    <div class="flex w-full h-full shadow-md items-center text-center text-6xl justify-center">
-                        B
+                    
+                    <div class="w-full px-2 lg:w-1/2 lg:pl-8 ">
+                        <h1 class="mb-3 text-3xl font-bold text-slate-800 md:text-4xl lg:text-5xl">Wihara Sima</h1>
+                        <p class="font-medium text-slate-700 mb-4 mt-1 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde necessitatibus possimus sit iste rerum dolores ducimus, dolorem quibusdam adipisci quasi in. Saepe consectetur minima, alias cum, consequatur omnis illum recusandae, eligendi fugiat aliquam ad veniam. Mollitia autem placeat ea aliquam? Ducimus reprehenderit voluptate hic rerum ratione maxime qui expedita?</p>
+                        {{-- <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                            <div class="text-center flex-1">
+                                <div class="bg-redRiung p-4 text-white rounded-md">
+                                    <h1 class="text-4xl">{{ $bidangCount }}</h1>
+                                    <p>Bidang & Biro</p>
+                                </div>
+                            </div>
+                            <div class="text-center flex-1">
+                                <div class="bg-redRiung p-4 text-white rounded-md">
+                                    <h1 class="text-4xl">{{ $anggotaCount }}</h1>
+                                    <p>Anggota</p>
+                                </div>
+                            </div>
+                            <div class="text-center flex-1">
+                                <div class="bg-redRiung p-4 text-white rounded-md">
+                                    <h1 class="text-4xl">{{ $programCount }}</h1> 
+                                    <p>program</p>
+                                </div>
+                            </div>
+                        </div> --}}
+                        <div class="w-full mt-4 ">
+                            <a href="/tentang" class="block w-full text-center rounded-lg text-Poppins font-bold py-4 px-8 text-white 
+                            bg-blue-900
+                            hover:bg-white hover:text-blue-900 hover:bg-clip-text 
+                            hover:bg-gradient-to-r hover:from-[#1D66A6] hover:to-[#DC7477] 
+                            hover:border hover:border-[#1D66A6] hover:shadow-xl 
+                            transition-all duration-300 ease-in-out">
+                                Tentang Kami
+                            </a>
+                        </div>
                     </div>
-
                 </div>
-                <div class="flex flex-row w-full h-3/5 gap-4 pl-8">
-                    <div class="flex w-full h-full shadow-md items-center text-center text-6xl justify-center">
-                        C
-                    </div>
-                    <div class="flex w-full h-full shadow-md items-center text-center text-6xl justify-center">
-                        D
-                    </div>
-
-                </div>
             </div>
-            </div>
-        </div>
-        <div class="w-full h-screen flex flex-row items-center justify-start px-8">
-            <img src="{{ asset('assets/logo.png') }}" alt="Logo Kabupaten Semarang" class="block w-3/6 h-3/4 bg-cover">
-            <div class="flex flex-col items-start justify-start w-full h-3/4 px-4 ">
-                <h1 class="text-5xl font-bold mb-4">Sambutan Kepala Desa</h1>
-                <h1 class="text-3xl font-bold mb-4">Prabowo</h1>
-                <h3 class="text-lg font-semibold mb-4">Kepala Desa Regunung</h3>
-                <p class="text-lg mb-4 text-justify">
-                    Website ini adalah website resmi Desa Regunung. Website ini bertujuan untuk memberikan informasi kepada masyarakat tentang Desa Regunung.
-                    Melalui website ini Anda dapat menjelajahi segala hal yang terkait dengan Desa. Aspek pemerintahan, penduduk, demografi, potensi Desa, dan juga berita tentang Desa.
-                    Website ini juga bertujuan untuk memberikan informasi kepada masyarakat tentang Desa Regunung. Melalui website ini Anda dapat menjelajahi segala hal yang terkait dengan Desa. Aspek pemerintahan, penduduk, demografi, potensi Desa, dan juga berita tentang Desa.
-                </p>
-            </div>
-
-
-        </div>
-
-        <!-- Peta desa -->
-        <div class="w-full h-screen flex flex-row items-center justify-start px-8">
-            <div class="flex flex-col items-start justify-start w-full h-full py-4 ">
-                <h1 class="text-5xl font-bold mb-4">Peta Desa</h1>
-                <div class="w-full h-full bg-gradient-to-r from-blue-500 to-green-500">
-
-                </div>
-            </div>
-        </div>
+        </section>
 
         <!-- SOTK (Struktur Organisasi dan Tata Kerja Desa Regunun) -->
-        <div class="w-full h-screen flex flex-row items-center justify-start px-8">
+        {{-- <div class="w-full h-screen flex flex-row items-center justify-start px-8">
             <div class="flex flex-col items-start justify-start w-full h-full py-4 ">
                 <h1 class="text-5xl font-bold mb-4">SOTK</h1>
                 <h3 class="text-lg mb-4">Struktur Organisasi dan Tata Kerja Desa Regunung</h3>
@@ -89,8 +112,8 @@
                 </div>
 
             </div>
-        </div>
-        <div class="flex flex-col items-start justify-center w-full h-screen px-8 gap-4">
+        </div> --}}
+        {{-- <div class="flex flex-col items-start justify-center w-full h-screen px-8 gap-4">
             <h1 class="text-5xl font-bold mb-4">Administrasi Penduduk</h1>
             
             <p class="w-3/4 text-justify">
@@ -153,8 +176,8 @@
                 </div>
             </div>
 
-        </div>
-        <div class="w-full h-screen flex flex-row items-center justify-start px-8">
+        </div> --}}
+        {{-- <div class="w-full h-screen flex flex-row items-center justify-start px-8">
             <div class="w-full h-3/4 flex items-center justify-center bg-gradient-to-t from-blue-500 to-green-500 ">
 
 
@@ -174,7 +197,8 @@
 
             </div>
 
-        </div>
+        </div> --}}
+        <x-footer></x-footer>
 
     </body>
 </html>
