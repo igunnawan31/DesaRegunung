@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\SejarahController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -46,3 +47,16 @@ Route::middleware([
         return Inertia::render('Dashboard');
     })->name('dashboard');
 });
+
+Route::get('/sejarahs', function() {
+    return view('sejarah'); // Shows list view
+});
+
+// For single sejarah view
+Route::get('/sejarah/{id}', function($id) {
+    return view('sejarahs', ['id' => $id]); // Shows single view
+});
+
+// Or with controller:
+Route::get('/sejarahs', [SejarahController::class, 'index']);
+Route::get('/sejarah/{id}', [SejarahController::class, 'show']);

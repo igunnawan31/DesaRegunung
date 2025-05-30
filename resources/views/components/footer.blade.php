@@ -1,4 +1,4 @@
-<footer class="py-8 text-white"
+<footer class="py-8 text-white mt-auto w-full"
     style="background:  rgb(30 58 138)" class="h-64">
     <div class="mx-auto container ">
         <div class="flex flex-wrap mx-auto px-4 items-center justify-center">

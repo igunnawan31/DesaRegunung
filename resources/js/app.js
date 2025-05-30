@@ -74,19 +74,19 @@ tabs.forEach((tab) => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-    fetch("http://localhost:8000/api/sejarah")
+document.addEventListener("DOMContentLoaded", function() {
+    fetch("/api/sejarah")
         .then(response => response.json())
         .then(data => {
             const container = document.getElementById("sejarah-cards");
             data.forEach(item => {
                 container.innerHTML += `
                     <div class="w-full bg-white border border-gray-200 rounded-lg shadow-md">
-                        <a href="#">
+                        <a href="/sejarah/${item.id}"> <!-- Link to single view -->
                             <img loading="lazy" class="rounded-t-lg w-full h-64 object-cover" src="${item.image_sejarah}" alt="" />
                         </a>
                         <div class="p-5">
-                            <a href="#">
+                            <a href="/sejarah/${item.id}"> <!-- Consistent link -->
                                 <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900">
                                     ${item.name_sejarah}
                                 </h5>
@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <p class="mb-3 font-normal text-gray-700 line-clamp-2">
                                 ${item.description1}
                             </p>
-                            <a href="#" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
+                            <a href="/sejarah/${item.id}" class="inline-flex items-center px-3 py-2 text-sm font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800">
                                 Read more
                                 <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" fill="none" viewBox="0 0 14 10">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -109,5 +109,5 @@ document.addEventListener("DOMContentLoaded", function () {
                 `;
             });
         })
-        .catch(error => console.error("Error fetching sejarah data:", error));
+    .catch(error => console.error("Error:", error));
 });

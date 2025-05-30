@@ -26,6 +26,8 @@ class SejarahController extends Controller
             return response()->json(['message' => 'Not Found'], 404);
         }
 
+        $sejarah->image_sejarah = asset('storage/' . $sejarah->image_sejarah);
+        
         return response()->json($sejarah);
     }
 }
