@@ -38,7 +38,7 @@
                                 </div>
                             @endforeach --}}
                             <div class="duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ asset('assets/Desa.jpg') }}" class="absolute block w-full rounded-lg" alt="Post Image">
+                                <img src="{{ asset('assets/Desa.jpg') }}" class="absolute block w-full rounded-lg" alt="Post Image" loading="lazy">
                             </div>
                         </div>
                         <div class="absolute z-5 flex -translate-x-1/2 bottom-7 left-1/2 space-x-3 rtl:space-x-reverse">

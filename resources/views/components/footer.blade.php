@@ -5,7 +5,7 @@
             <!-- logo -->
             <div class="w-full mb-8 md:mb-0 lg:w-3/6">
                 <div class="flex flex-col gap-4 justify-start lg:items-center md:flex-row">
-                    <img src="{{ asset('assets/logo.png') }}" alt="logo bem " class="w-2/5 md:w-[20%] lg:w-[10%] my-4">
+                    <img src="{{ asset('assets/logo.png') }}" alt="logo bem " class="w-2/5 md:w-[20%] lg:w-[10%] my-4" loading="lazy">
                     <div class="flex flex-col justify-center ">
                         <h1 class="font-semibold text-2xl md:text-3xl lg:text-5xl mb-1">Wisma Sima</h1>
                     </div>
