@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 container.innerHTML += `
                     <div class="w-full bg-white border border-gray-200 rounded-lg shadow-md">
                         <a href="#">
-                            <img loading="lazy" class="rounded-t-lg w-full h-48 object-cover" src="${item.image_sejarah}" alt="" />
+                            <img loading="lazy" class="rounded-t-lg w-full h-64 object-cover" src="${item.image_sejarah}" alt="" />
                         </a>
                         <div class="p-5">
                             <a href="#">
@@ -101,16 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
                                         d="M1 5h12m0 0L9 1m4 4L9 9"/>
                                 </svg>
                             </a>
-                            <div class="mt-4 flex justify-between items-center text-sm text-gray-500">
-                                <div class="flex flex-col gap-1">
-                                    <div class="flex items-center gap-1">
-                                        Administrator
-                                    </div>
-                                    <div class="flex items-center gap-1">
-                                        Dilihat 1.471 kali
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div class="bg-black text-white text-sm font-bold px-4 py-2 rounded-b-lg">
                             ${new Date(item.date_sejarah).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', year: 'numeric' })}

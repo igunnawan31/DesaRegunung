@@ -10,7 +10,12 @@ class SejarahController extends Controller
 {
     public function index()
     {
-        return response()->json(Sejarah::all());
+        return response()->json(
+            Sejarah::all()->map(function ($item) {
+                $item->image_sejarah = asset('storage/' . $item->image_sejarah);
+                return $item;
+            })
+        );
     }
 
     public function show($id)
