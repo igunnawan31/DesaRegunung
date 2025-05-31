@@ -18,7 +18,7 @@
                     hover:bg-white hover:text-blue-900 hover:border hover:border-[#1D66A6] 
                     transition-all duration-300 ease-in-out
                     text-sm sm:text-base md:text-lg">
-                &lt; Tentang Kami
+                Sejarah Lainnya
             </a>
         </div>
         @isset($sejarah)

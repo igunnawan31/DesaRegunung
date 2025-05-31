@@ -11,7 +11,7 @@
 <body>
     <x-navbar></x-navbar>
     <div class="container mx-auto px-4 mt-28 md:mt-44 mb-32">
-        <div class="text-4xl font-bold text-black">Galeri</div>
+        <div class="text-4xl font-bold text-blue-900">Galeri</div>
         <div class="text-xl text-slate-700 mt-2 mb-6">Menyajikan informasi terbaru tentang peristiwa, berita terkini, dan artikel-artikel jurnalistik dari Desa Regunung</div>
         
     <div id="galeri-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
