@@ -48,14 +48,14 @@
                                 Sejarah
                             </a>
                         </li>
-                        <li class="group mb-2">
+                        {{-- <li class="group mb-2">
                             <a href="/umkm" class="relative text-base text-white p-2 mx-8 rounded-lg flex group-hover:shadow-md 
                                 after:content-[''] after:absolute after:h-1 after:bg-white after:rounded-full 
                                 after:w-full after:-bottom-1 after:left-0 after:transition-all after:duration-300 
                                 {{ request()->is('umkm') ? 'after:opacity-100' : 'after:opacity-0' }}">
                                 UMKM
                             </a>
-                        </li>
+                        </li> --}}
                         <li class="group mb-2">
                             <a href="/galeri" class="relative text-base text-white p-2 mx-8 rounded-lg flex group-hover:shadow-md 
                                 after:content-[''] after:absolute after:h-1 after:bg-white after:rounded-full 

@@ -29,64 +29,18 @@
         </section>
         <section id="About" class="py-24 px-4 lg:px-8">
             <div class="container mx-auto">
-                <div class="flex flex-wrap">
-                    <div id="default-carousel" class="relative w-full px-2 lg:w-1/2 justify-center" data-carousel="slide">
+                <div class="flex flex-col lg:flex-row gap-8">
+                    <div class="w-full lg:w-1/2 px-2">
                         <div class="relative aspect-video overflow-hidden rounded-lg w-full h-full">
-                            {{-- @foreach($posts as $index => $post)
-                                <div class="{{ $index === 0 ? '' : 'hidden' }} duration-700 ease-in-out" data-carousel-item>
-                                    <img src="{{ asset('storage/' . $post->post_foto) }}" class="absolute block w-full rounded-lg" alt="Post Image">
-                                </div>
-                            @endforeach --}}
-                            <div class="duration-700 ease-in-out" data-carousel-item>
-                                <img src="{{ asset('assets/Desa.jpg') }}" class="absolute block w-full rounded-lg" alt="Post Image" loading="lazy">
-                            </div>
+                            <img src="{{ asset('assets/Desa.jpg') }}" 
+                                class="w-full h-full object-cover rounded-lg" 
+                                alt="Post Image">
                         </div>
-                        <div class="absolute z-5 flex -translate-x-1/2 bottom-7 left-1/2 space-x-3 rtl:space-x-reverse">
-                            {{-- @foreach($posts as $post)
-                                <button type="button" class="w-3 h-3 rounded-full" aria-current="{{ $index === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $index + 1 }}" data-carousel-slide-to="{{ $index }}"></button>
-                            @endforeach --}}
-                        </div>
-                        <button type="button" class="absolute top-0 start-0 z-5 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
-                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
-                                </svg>
-                                <span class="sr-only">Previous</span>
-                            </span>
-                        </button>
-                        <button type="button" class="absolute top-0 end-0 z-5 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
-                            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
-                                </svg>
-                                <span class="sr-only">Next</span>
-                            </span>
-                        </button>
                     </div>
                     
                     <div class="w-full px-2 lg:w-1/2 lg:pl-8 ">
                         <h1 class="mb-3 text-3xl font-bold text-slate-800 md:text-4xl lg:text-5xl">Wihara Sima</h1>
                         <p class="font-medium text-slate-700 mb-4 mt-1 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde necessitatibus possimus sit iste rerum dolores ducimus, dolorem quibusdam adipisci quasi in. Saepe consectetur minima, alias cum, consequatur omnis illum recusandae, eligendi fugiat aliquam ad veniam. Mollitia autem placeat ea aliquam? Ducimus reprehenderit voluptate hic rerum ratione maxime qui expedita?</p>
-                        {{-- <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-                            <div class="text-center flex-1">
-                                <div class="bg-redRiung p-4 text-white rounded-md">
-                                    <h1 class="text-4xl">{{ $bidangCount }}</h1>
-                                    <p>Bidang & Biro</p>
-                                </div>
-                            </div>
-                            <div class="text-center flex-1">
-                                <div class="bg-redRiung p-4 text-white rounded-md">
-                                    <h1 class="text-4xl">{{ $anggotaCount }}</h1>
-                                    <p>Anggota</p>
-                                </div>
-                            </div>
-                            <div class="text-center flex-1">
-                                <div class="bg-redRiung p-4 text-white rounded-md">
-                                    <h1 class="text-4xl">{{ $programCount }}</h1> 
-                                    <p>program</p>
-                                </div>
-                            </div>
-                        </div> --}}
                         <div class="w-full mt-4 ">
                             <a href="/tentang" class="block w-full text-center rounded-lg text-Poppins font-bold py-4 px-8 text-white 
                             bg-blue-900

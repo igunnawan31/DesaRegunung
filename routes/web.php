@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\SejarahController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -57,6 +58,7 @@ Route::get('/sejarah/{id}', function($id) {
     return view('sejarahs', ['id' => $id]); // Shows single view
 });
 
-// Or with controller:
+Route::get('/profildesa', [GaleriController::class, 'index']);
+
 Route::get('/sejarahs', [SejarahController::class, 'index']);
 Route::get('/sejarah/{id}', [SejarahController::class, 'show']);

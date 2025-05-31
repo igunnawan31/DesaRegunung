@@ -11,7 +11,7 @@
 <body>
     <x-navbar></x-navbar>
         
-    <div class="container mx-auto px-4 lg:px-20 mt-28 md:mt-44 mb-32">
+    <div class="container mx-auto px-4 mt-28 md:mt-44 mb-32">
         <div class="mt-4 mb-6 flex justify-start md:justify-start lg:justify-start">
             <a href="/sejarah" 
             class="inline-block text-center rounded-lg text-Poppins font-bold py-3 px-6 text-white bg-blue-900
