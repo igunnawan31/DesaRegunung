@@ -12,13 +12,13 @@
         <section id="Home" class="relative min-h-screen pb-24 pt-36 bg-cover bg-center" style="background-image: url('{{ asset('assets/Desa.jpg') }}');">
             <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
 
-            <div class="relative z-5 flex items-center justify-center h-full py-[13rem]">
+            <div class="relative z-5 flex items-center justify-center h-full py-[13rem] px-4 lg:px-8">
                 <div class="container mx-auto">
                     <div class="flex items-center justify-center">
                         <div class="w-full flex items-center justify-start">
                             <div class="text-center">
                                 <h1 class="mb-10 text-7xl font-bold md:text-7xl lg:text-8xl lg:text-left animate-fadeInUp text-white">Wihara Sima</h1>
-                                <h2 class="text-2xl lg:text-justify animate-fadeInUp delay-150 text-white shadow-sm">
+                                <h2 class="text-xl lg:text-2xl text-justify animate-fadeInUp delay-150 text-white shadow-sm">
                                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates ullam placeat impedit rerum expedita explicabo doloribus non voluptatem? A earum necessitatibus nisi ab aliquid eveniet magni ut ipsum excepturi vero illo quidem explicabo voluptates, sequi, animi alias dicta et nulla. Pariatur consectetur tenetur officiis modi expedita, sint sapiente hic harum?
                                 </h2>
                             </div>
@@ -43,7 +43,7 @@
                         <p class="font-medium text-slate-700 mb-4 mt-1 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit unde necessitatibus possimus sit iste rerum dolores ducimus, dolorem quibusdam adipisci quasi in. Saepe consectetur minima, alias cum, consequatur omnis illum recusandae, eligendi fugiat aliquam ad veniam. Mollitia autem placeat ea aliquam? Ducimus reprehenderit voluptate hic rerum ratione maxime qui expedita?</p>
                         <div class="w-full mt-4 ">
                             <a href="/tentang" class="block w-full text-center rounded-lg text-Poppins font-bold py-4 px-8 text-white 
-                            bg-blue-900
+                            bg-blue-900 border
                             hover:bg-white hover:text-blue-900 hover:bg-clip-text 
                             hover:bg-gradient-to-r hover:from-[#1D66A6] hover:to-[#DC7477] 
                             hover:border hover:border-[#1D66A6] hover:shadow-xl 

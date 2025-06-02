@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\KesanPesanController;
 use App\Http\Controllers\SejarahController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -50,15 +51,21 @@ Route::middleware([
 });
 
 Route::get('/sejarahs', function() {
-    return view('sejarah'); // Shows list view
+    return view('sejarah'); 
 });
 
-// For single sejarah view
 Route::get('/sejarah/{id}', function($id) {
-    return view('sejarahs', ['id' => $id]); // Shows single view
+    return view('sejarahs', ['id' => $id]); 
+});
+
+Route::get('/kesanpesan', function() {
+    return view('kesanpesan');
 });
 
 Route::get('/profildesa', [GaleriController::class, 'index']);
 
 Route::get('/sejarahs', [SejarahController::class, 'index']);
 Route::get('/sejarah/{id}', [SejarahController::class, 'show']);
+
+Route::get('/kesanpesan', [KesanPesanController::class, 'index'])->name('kesanpesan.index');
+Route::post('/kesanpesan', [KesanPesanController::class, 'store'])->name('kesanpesan.store');

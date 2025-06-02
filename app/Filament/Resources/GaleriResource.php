@@ -30,6 +30,7 @@ class GaleriResource extends Resource
                     ->disk('public')
                     ->directory('form-attachments')
                     ->visibility('public')
+                    ->optimize('webp')
                     ->image()
                     ->imageEditor()
                     ->imageEditorAspectRatios([

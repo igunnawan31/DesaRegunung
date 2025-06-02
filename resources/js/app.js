@@ -169,6 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch(`/api/galeri?page=${page}`)
             .then(res => res.json())
             .then(data => {
+                console.log(data);
                 galeriGrid.innerHTML = '';
 
                 if (!data.data || !Array.isArray(data.data)) {
@@ -292,3 +293,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+window.onload = function () {
+    const successAlert = document.getElementById('success-alert');
+    if (successAlert) {
+        successAlert.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+};
