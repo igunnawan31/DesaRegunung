@@ -31,7 +31,7 @@
             Berikan kesan anda kepada kami agar kami dapat memberikan layanan yang terbaik kedepannya
         </div>
 
-        <form action="{{ route('kesanpesan.store') }}" method="POST" class="mt-10 space-y-6 w-full">
+        <form action="{{ route('kesanpesan.store', ['lang' => app()->getLocale()]) }}" method="POST" class="mt-10 space-y-6 w-full">
             @csrf
             <div>
                 <label for="nama" class="block text-sm font-medium text-blue-900">Nama</label>
@@ -62,7 +62,7 @@
             @foreach ($komentar as $item)
                 <div class="mb-6 p-4 rounded-md bg-white border shadow-sm">
                     <div class="font-semibold text-blue-900">{{ $item->nama }} <span class="text-sm text-gray-500">({{ $item->asal }})</span></div>
-                    <div class="mt-1 text-slate-700">{{ $item->kesan_pesan }}</div>
+                    <div class="mt-1 text-slate-700">{{ app()->getLocale() === 'id' ? $item->kesan_pesan_id : $item->kesan_pesan_en }}</div>
                 </div>
             @endforeach
 

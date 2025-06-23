@@ -9,5 +9,5 @@ class KesanPesan extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'asal', 'kesan_pesan'];
+    protected $fillable = ['nama', 'asal', 'kesan_pesan_id','kesan_pesan_en'];
 }

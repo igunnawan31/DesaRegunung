@@ -1,71 +1,52 @@
 <?php
 
+use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\KesanPesanController;
 use App\Http\Controllers\SejarahController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-// Route::get('/', function () {
-//     return Inertia::render('Welcome', [
-//         'canLogin' => Route::has('login'),
-//         'canRegister' => Route::has('register'),
-//         'laravelVersion' => Application::VERSION,
-//         'phpVersion' => PHP_VERSION,
-//     ]);
-// });
+// Redirect default root to ID
+Route::get('/', fn() => redirect('/id'));
 
-Route::get('/', function () {
-    return view('beranda');
-});
+// Group for language prefix
+Route::prefix('{lang}')
+    ->where(['lang' => 'id|en'])
+    ->middleware(['setlocale'])
+    ->group(function () {
+        
+        Route::get('/', function ($lang) {
+            return view("$lang.beranda");
+        });
 
-Route::get('/sejarah', function () {
-    return view('sejarah');
-});
+        Route::get('/sejarah', [SejarahController::class, 'index']);
+        Route::get('/sejarah/{id}', [SejarahController::class, 'show']);
 
-Route::get('/galeri', function () {
-    return view('galeri');
-});
+        Route::get('/artikel', [ArtikelController::class, 'index']);
+        Route::get('/artikel/{id}', [ArtikelController::class, 'show']);
 
-Route::get('/informasi', function () {
-    return view('informasi');
-});
+        Route::get('/galeri', [GaleriController::class, 'index']);
+        Route::get('/galeri/{id}', [GaleriController::class, 'show']);
 
-Route::get('/profildesa', function () {
-    return view('profildesa');
-});
+        Route::get('/profildesa', [GaleriController::class, 'indexprofil']);
 
-Route::get('/umkm', function () {
-    return view('umkm');
-});
+        Route::get('/informasi', function ($lang) {
+            return view("$lang.informasi");
+        });
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified',
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
-});
+        Route::get('/umkm', function ($lang) {
+            return view("$lang.umkm");
+        });
 
-Route::get('/sejarahs', function() {
-    return view('sejarah'); 
-});
+        Route::get('/kesanpesan', [KesanPesanController::class, 'index'])->name('kesanpesan.index');
+        Route::post('/kesanpesan', [KesanPesanController::class, 'store'])->name('kesanpesan.store');
 
-Route::get('/sejarah/{id}', function($id) {
-    return view('sejarahs', ['id' => $id]); 
-});
-
-Route::get('/kesanpesan', function() {
-    return view('kesanpesan');
-});
-
-Route::get('/profildesa', [GaleriController::class, 'index']);
-
-Route::get('/sejarahs', [SejarahController::class, 'index']);
-Route::get('/sejarah/{id}', [SejarahController::class, 'show']);
-
-Route::get('/kesanpesan', [KesanPesanController::class, 'index'])->name('kesanpesan.index');
-Route::post('/kesanpesan', [KesanPesanController::class, 'store'])->name('kesanpesan.store');
+        Route::middleware([
+            'auth:sanctum',
+            config('jetstream.auth_session'),
+            'verified',
+        ])->group(function () {
+            Route::get('/dashboard', fn() => Inertia::render('Dashboard'))->name('dashboard');
+        });
+    });

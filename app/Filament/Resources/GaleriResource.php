@@ -40,7 +40,7 @@ class GaleriResource extends Resource
                     ->required(),
                 Forms\Components\Textarea::make('description_acara')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(1000),
             ]);
     }
 

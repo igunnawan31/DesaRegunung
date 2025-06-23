@@ -39,11 +39,11 @@ class SejarahResource extends Resource
                 ->required(),
                 Forms\Components\Textarea::make('description1')
                     ->required()
-                    ->maxLength(255),
+                    ->maxLength(1000),
                 Forms\Components\Textarea::make('description2')
-                    ->maxLength(255),
+                    ->maxLength(1000),
                 Forms\Components\Textarea::make('description3')
-                    ->maxLength(255),
+                    ->maxLength(1000),
                 
             ]);
     }

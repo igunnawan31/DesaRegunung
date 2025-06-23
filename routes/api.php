@@ -9,8 +9,3 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::get('/sejarah', [SejarahController::class, 'index']);
-Route::get('/sejarah/{id}', [SejarahController::class, 'show']);
-
-Route::get('/galeri', [GaleriController::class, 'indexPagination']);
-Route::get('/galeri/{id}', [GaleriController::class, 'show']);

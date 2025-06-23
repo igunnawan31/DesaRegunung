@@ -13,7 +13,7 @@
     <div class="container mx-auto px-4 mt-28 md:mt-44 mb-32">
         <div class="text-3xl md:text-4xl font-bold text-blue-900">Sejarah Wihara</div>
         <div class="text-lg md:text-xl text-slate-700 mt-2">
-            Menyajikan informasi terbaru tentang peristiwa, berita terkini, dan artikel-artikel jurnalistik dari Desa Regunung
+            Menyajikan informasi terbaru tentang peristiwa, berita terkini, dan artikel-artikel jurnalistik dari Wihara Sima
         </div>
         
         <div id="sejarah-cards" class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

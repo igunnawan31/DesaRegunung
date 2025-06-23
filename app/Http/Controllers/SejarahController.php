@@ -9,12 +9,21 @@ class SejarahController extends Controller
 {
     public function index()
     {
-        return view('sejarah');
+        $lang = app()->getLocale();
+        $sejarah = Sejarah::orderBy('date_sejarah')->paginate(8);
+        return view("$lang.sejarah", compact('sejarah'));
     }
 
-    public function show($id)
+    public function show($lang, $id)
     {
         $sejarah = Sejarah::findOrFail($id);
-        return view('sejarahs', compact('sejarah'));
+        return view("$lang.sejarahs", compact('sejarah'));
+    }
+
+    public function getPaginatedSejarah(Request $request)
+    {
+        $data = Sejarah::orderBy('date_sejarah')->paginate(8);
+        return response()->json($data);
     }
 }
+

@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('nama');
             $table->string('asal');
-            $table->text('kesan_pesan');
+            $table->text('kesan_pesan_id')->nullable();
+            $table->text('kesan_pesan_en')->nullable();
             $table->timestamps();
         });
     }
