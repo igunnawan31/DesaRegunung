@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\AssetController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\KesanPesanController;
 use App\Http\Controllers\SejarahController;
@@ -20,15 +21,18 @@ Route::prefix('{lang}')
             return view("$lang.beranda");
         });
 
+        // Sejarah
         Route::get('/sejarah', [SejarahController::class, 'index']);
         Route::get('/sejarah/{id}', [SejarahController::class, 'show']);
+        Route::get('/sejarah/asset/{id}', [AssetController::class, 'show']);
 
+        // Artikel
         Route::get('/artikel', [ArtikelController::class, 'index']);
         Route::get('/artikel/{id}', [ArtikelController::class, 'show']);
 
+        // Galeri
         Route::get('/galeri', [GaleriController::class, 'index']);
         Route::get('/galeri/{id}', [GaleriController::class, 'show']);
-
         Route::get('/profildesa', [GaleriController::class, 'indexprofil']);
 
         Route::get('/informasi', function ($lang) {

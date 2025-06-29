@@ -65,7 +65,7 @@
             <div class="w-[12rem] rounded-lg bg-blue-900 h-1"></div>
         </div>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             @foreach ($galeriposts->take(4) as $glr)
             <div class="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
                 <div class="aspect-[4/3] overflow-hidden">

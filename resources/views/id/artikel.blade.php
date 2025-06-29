@@ -44,6 +44,9 @@
                     </div>
                 </div>
             @endforeach
+            <div class="mt-8">
+                {{ $artikel->links() }}
+            </div>
         </div>
     </div>
     <x-footer></x-footer>
